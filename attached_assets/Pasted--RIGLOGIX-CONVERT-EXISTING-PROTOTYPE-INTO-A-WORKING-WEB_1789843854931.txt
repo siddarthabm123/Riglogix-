@@ -1,0 +1,1103 @@
+# RIGLOGIX — CONVERT EXISTING PROTOTYPE INTO A WORKING WEB APPLICATION
+
+You are an expert full-stack developer and product engineer.
+
+I have uploaded a ZIP file containing the source code/prototype of my project **RigLogix**.
+
+Your task is to **analyze the complete uploaded source code first and then convert/complete it into a polished, functional, responsive web application that can run directly in Replit.**
+
+Do NOT start coding immediately.
+
+First inspect the complete ZIP/project structure and understand:
+
+* Existing frontend
+* Existing Android/Jetpack Compose implementation
+* Existing React/TypeScript implementation
+* Components
+* Screens
+* Data models
+* Database structure
+* Business logic
+* Booking flow
+* Reverse auction logic
+* Spatial/radar functionality
+* Telematics concepts
+* Owner portal
+* Pricing calculations
+* Navigation
+* Existing mock data
+* Existing assets
+* Existing styling
+
+Then build the web application based on the existing implementation.
+
+---
+
+# 1. PROJECT OBJECTIVE
+
+RigLogix is a **digital marketplace for heavy machinery and commercial equipment**.
+
+The platform connects:
+
+### CUSTOMERS / CONTRACTORS
+
+who need heavy machinery
+
+with
+
+### EQUIPMENT OWNERS / OPERATORS
+
+who have machinery available for rental/deployment.
+
+The platform should make the process:
+
+**Discover → Understand → Compare → Bid/Book → Track → Review**
+
+The goal is to reduce fragmented machinery discovery and create a more transparent digital rental/deployment workflow.
+
+---
+
+# 2. IMPORTANT — PRESERVE THE ORIGINAL CONCEPT
+
+Do NOT redesign RigLogix into an unrelated generic equipment-rental website.
+
+Use the uploaded source as the foundation.
+
+Preserve and implement the important concepts already present in the source:
+
+* Machinery marketplace
+* Equipment catalog
+* Search and filtering
+* Equipment specifications
+* Plain-English equipment explanation
+* Direct-to-owner concept
+* Transparent pricing
+* Platform fee calculation
+* Legacy broker comparison
+* Reverse auction
+* Operator bidding
+* Spatial/radar discovery
+* H3-based spatial concept
+* Geofence/radius filtering
+* Telematics
+* GPS information
+* Booking
+* Booking milestones
+* Deployment tracking
+* Owner portal
+* Fleet management
+* Ratings and reviews
+
+Where a feature exists only as mock/demo logic, keep it functional as a prototype and clearly structure the code so it can later be connected to real APIs.
+
+---
+
+# 3. FIRST STEP — ANALYZE THE ZIP
+
+Before making changes, inspect all relevant files.
+
+Create an internal understanding of:
+
+### Frontend
+
+Identify:
+
+* Framework
+* Components
+* Routes
+* Pages
+* Styling system
+* UI libraries
+* Icons
+* Assets
+
+### Data
+
+Identify:
+
+* Machinery models
+* Booking models
+* Auction models
+* Bid models
+* Owner/fleet models
+* Review models
+* Telematics models
+
+### Existing functionality
+
+Identify what is:
+
+* Fully implemented
+* Partially implemented
+* Mocked
+* Static
+* Simulated
+* Missing
+
+Do not remove useful existing functionality.
+
+---
+
+# 4. WEB TECHNOLOGY
+
+Use a modern web stack compatible with Replit.
+
+Preferred:
+
+### Frontend
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Lucide React icons
+
+### Backend
+
+Use a lightweight Node.js/Express backend if required.
+
+### Database
+
+For the prototype, use:
+
+* SQLite / local persistent database
+
+or another Replit-friendly database if the existing project already has a suitable implementation.
+
+Do not introduce unnecessary complexity.
+
+---
+
+# 5. RESPONSIVE WEB DESIGN
+
+The application must work properly on:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+Prioritize desktop because this is primarily a college project demonstration, but ensure mobile responsiveness.
+
+Use:
+
+* Responsive grid
+* Collapsible sidebar
+* Responsive cards
+* Responsive tables
+* Responsive modals
+* Mobile-friendly navigation
+
+---
+
+# 6. APPLICATION STRUCTURE
+
+Create a clear navigation structure.
+
+## Main navigation
+
+### Dashboard
+
+Overview of marketplace activity.
+
+### Machinery
+
+Browse available equipment.
+
+### Auctions
+
+View/create reverse auctions.
+
+### Radar
+
+Find nearby equipment.
+
+### Bookings
+
+Manage active and completed bookings.
+
+### Owner Portal
+
+Manage fleet and jobs.
+
+### Reviews
+
+View customer/operator ratings.
+
+### Profile
+
+User/account information.
+
+---
+
+# 7. DASHBOARD
+
+Create a professional RigLogix dashboard.
+
+Display useful metrics such as:
+
+* Available Machinery
+* Active Auctions
+* Active Bookings
+* Nearby Equipment
+* Completed Jobs
+
+Also show:
+
+### Recent Activity
+
+Examples:
+
+* New auction created
+* Bid received
+* Booking confirmed
+* Equipment mobilizing
+* Equipment arrived on site
+* Job completed
+
+Use data from the prototype rather than inventing unrealistic statistics.
+
+---
+
+# 8. MACHINERY MARKETPLACE
+
+Create the main machinery discovery page.
+
+Users should be able to:
+
+* Search equipment
+* Filter by category
+* Filter by availability
+* Filter by distance
+* Sort by price
+* Sort by rating
+* View equipment cards
+* Open detailed equipment pages
+
+Each equipment card should show relevant information such as:
+
+* Equipment name
+* Category
+* Owner
+* Rating
+* Location
+* Distance
+* Rental rate
+* Availability
+* Verification status
+
+Use the existing prototype data.
+
+---
+
+# 9. EQUIPMENT DETAILS
+
+Create a detailed equipment page/modal.
+
+Display:
+
+### Basic information
+
+* Equipment name
+* Category
+* Owner
+* Rating
+* Location
+
+### Technical specifications
+
+Use the existing source data.
+
+Examples may include:
+
+* Engine
+* Power
+* Capacity
+* Tonnage
+* Dimensions
+* Operating parameters
+* Equipment-specific specifications
+
+### Operational information
+
+* Operator availability
+* Telemetry availability
+* Fuel level where supported
+* Engine hours where supported
+* Current status
+
+### Pricing
+
+Show:
+
+**Base Equipment Rate**
+
+*
+
+**RigLogix Platform Fee**
+
+=
+
+**Customer Total**
+
+---
+
+# 10. PLAIN-ENGLISH EQUIPMENT EXPLAINER
+
+Implement the existing concept of explaining technical machinery information in simple language.
+
+Add an:
+
+**“Understand This Machine”**
+
+button.
+
+When clicked, show:
+
+### What is this machine?
+
+Simple explanation.
+
+### What is it used for?
+
+Practical jobsite applications.
+
+### Important specifications
+
+Explain important specifications in understandable language.
+
+### Is it suitable for my job?
+
+Use available prototype information to provide a simple suitability explanation.
+
+Do not claim AI functionality unless the source actually implements it.
+
+If the existing implementation is a static/demo explanation, preserve that behavior.
+
+---
+
+# 11. TRANSPARENT PRICING
+
+Implement the pricing calculator from the existing prototype.
+
+Use the source's pricing model.
+
+The prototype uses a:
+
+**3.5% RigLogix platform fee**
+
+Show:
+
+```text
+Base Equipment Cost
+        +
+RigLogix Platform Fee
+        =
+Total Customer Cost
+```
+
+Also show the prototype's comparison against the modeled legacy broker cost.
+
+If the prototype uses a **30% legacy broker comparison**, retain it but label it clearly as:
+
+**Prototype comparison assumption**
+
+Do not present this number as a verified industry-wide statistic.
+
+Show:
+
+* Owner rate
+* Platform fee
+* Total customer cost
+* Modeled broker comparison
+* Difference/savings
+
+Make the calculation dynamic.
+
+Changing rental duration or hours should update the totals.
+
+---
+
+# 12. BOOKING FLOW
+
+Create a functional booking workflow.
+
+The user should select:
+
+* Equipment
+* Date
+* Duration/shift
+* Job location
+* Required operating hours where applicable
+
+Then display:
+
+### Booking Summary
+
+* Equipment
+* Owner
+* Date
+* Duration
+* Base cost
+* Platform fee
+* Total
+
+Add:
+
+**Confirm Booking**
+
+After confirmation:
+
+* Generate booking ID
+* Save booking
+* Change booking status
+* Display confirmation
+
+---
+
+# 13. BOOKING STATUS
+
+Implement the prototype's milestone system.
+
+Use:
+
+```text
+PENDING
+↓
+CONFIRMED
+↓
+MOBILIZING
+↓
+ON SITE
+↓
+IN PROGRESS
+↓
+COMPLETED
+```
+
+Create a visual timeline.
+
+Allow the demo user to advance the milestone where appropriate.
+
+Clearly treat this as prototype/demo functionality.
+
+---
+
+# 14. REVERSE AUCTION
+
+This is one of the major RigLogix features.
+
+Create an Auctions page.
+
+Users should be able to:
+
+### Create an auction
+
+Enter:
+
+* Project title
+* Equipment category
+* Required equipment
+* Location
+* Job description
+* Required date
+* Ceiling/max price
+
+After creation, display the auction.
+
+---
+
+# 15. OPERATOR BIDDING
+
+Create a bidding interface.
+
+Show:
+
+* Auction title
+* Equipment requirement
+* Location
+* Ceiling price
+* Current lowest bid
+* Number of bids
+* Remaining time/status
+
+Operators can submit:
+
+**Bid Amount**
+
+Additional information can include:
+
+* Operator
+* Equipment
+* Rating
+* ETA
+* Distance
+
+The system should validate that bids are appropriate relative to the auction rules.
+
+After a lower bid is submitted:
+
+* Update lowest bid
+* Increase bid count
+* Display new bid
+* Update auction UI
+
+---
+
+# 16. AUCTION AWARD
+
+Allow the customer/demo user to select an appropriate bid.
+
+Display:
+
+* Winning/selected operator
+* Equipment
+* Bid amount
+* ETA
+* Distance
+* Operator rating
+
+Then provide:
+
+**Accept Bid**
+
+After acceptance:
+
+Create/update the booking.
+
+---
+
+# 17. SPATIAL RADAR
+
+Implement the existing RigLogix spatial discovery concept.
+
+Create a page called:
+
+## Equipment Radar
+
+Display machinery around a selected location.
+
+Include:
+
+* Distance
+* Equipment type
+* Availability
+* Owner
+* Status
+
+Use the source's H3/spatial information where possible.
+
+If a real map API is not configured, create a visually convincing **map/radar-style prototype** using the available data.
+
+Do not claim that the radar is receiving live GPS if it is only using static/demo coordinates.
+
+---
+
+# 18. GEOFENCE FILTER
+
+Allow users to specify a search radius.
+
+Example:
+
+```text
+Search radius:
+10 km
+25 km
+50 km
+100 km
+```
+
+Filter equipment based on the available distance/location data.
+
+If H3 IDs are available in the source, preserve them in the data model.
+
+---
+
+# 19. TELEMATICS
+
+Create an equipment telemetry panel where supported.
+
+Display information such as:
+
+* GPS coordinates
+* Fuel level
+* Engine hours
+* Speed
+* Equipment status
+* Telematics ID
+
+Use existing prototype values.
+
+Clearly label demo/static telemetry if it is not coming from a real IoT device.
+
+---
+
+# 20. OWNER PORTAL
+
+Create a separate owner-facing interface.
+
+Display:
+
+### Fleet Overview
+
+* Total equipment
+* Available equipment
+* Equipment currently on job
+* Offline equipment
+
+### Fleet cards
+
+Show:
+
+* Equipment
+* Registration
+* Capacity
+* Rate
+* Status
+* Fuel
+* Engine hours
+* Telematics ID
+
+### Owner Jobs
+
+Show:
+
+* Customer
+* Equipment
+* Location
+* Booking status
+* Earnings
+
+---
+
+# 21. REVIEWS AND RATINGS
+
+Implement the existing review functionality.
+
+After a completed job, allow a customer to submit:
+
+* Star rating
+* Review tags
+* Comment
+
+Update the equipment rating in the prototype data.
+
+Display:
+
+* Average rating
+* Review count
+* Recent reviews
+
+---
+
+# 22. DATA MODEL
+
+Preserve/implement structured models similar to the existing project.
+
+Important entities include:
+
+### Machinery
+
+Fields may include:
+
+* ID
+* Name
+* Category
+* Owner
+* Rating
+* Price
+* Location
+* Distance
+* H3 ID
+* Specifications
+* Availability
+* Verification
+* Telematics
+
+### Booking
+
+Fields may include:
+
+* ID
+* Machinery ID
+* Customer
+* Location
+* Date
+* Duration
+* Base price
+* Platform fee
+* Total
+* Owner earnings
+* Status
+* Telemetry
+* Review
+
+### Auction Job
+
+Fields may include:
+
+* ID
+* Project title
+* Category
+* Location
+* Requirements
+* Ceiling price
+* Lowest bid
+* Bid count
+* Status
+
+### Auction Bid
+
+Fields may include:
+
+* ID
+* Auction ID
+* Operator
+* Equipment
+* Bid amount
+* ETA
+* Rating
+* Distance
+
+### Owner Fleet
+
+Fields may include:
+
+* Equipment
+* Registration
+* Capacity
+* Rate
+* Online status
+* Current job
+* Fuel
+* Engine hours
+* Telematics ID
+
+---
+
+# 23. DATABASE
+
+If the original source already contains a Room/local database architecture, translate its concepts into an appropriate web database structure.
+
+For the web prototype, use a Replit-friendly database.
+
+Create:
+
+* Tables/models
+* CRUD operations
+* Seed data
+* Relationships
+
+The application should not lose data every time a UI component rerenders.
+
+---
+
+# 24. API STRUCTURE
+
+If a backend is used, create clean APIs.
+
+Example:
+
+```text
+GET    /api/machinery
+GET    /api/machinery/:id
+
+GET    /api/bookings
+POST   /api/bookings
+PATCH  /api/bookings/:id/status
+
+GET    /api/auctions
+POST   /api/auctions
+GET    /api/auctions/:id
+
+POST   /api/auctions/:id/bids
+POST   /api/auctions/:id/award
+
+GET    /api/owners
+GET    /api/owners/:id/fleet
+
+POST   /api/reviews
+GET    /api/reviews
+```
+
+Adapt these to the existing codebase if appropriate.
+
+---
+
+# 25. UI / BRAND DESIGN
+
+RigLogix should look like a professional **construction-tech + logistics-tech SaaS platform**.
+
+Use:
+
+### Primary visual style
+
+* Dark navy/charcoal
+* Industrial amber/orange
+* Blue/cyan technology accents
+* White/neutral surfaces
+* Green for successful states
+
+### Visual elements
+
+* Heavy machinery imagery
+* Location/radar graphics
+* Hexagonal spatial patterns
+* GPS indicators
+* Industrial dashboard cards
+* Clean charts
+* Modern icons
+
+Do not make the interface look like a generic school project.
+
+---
+
+# 26. LANDING PAGE
+
+Create a polished landing page.
+
+Hero section:
+
+## RigLogix
+
+### From Machinery Search to Verified Deployment
+
+Supporting text:
+
+**Discover, compare, bid, book and track heavy machinery through one connected digital marketplace.**
+
+Primary CTA:
+
+**Explore Machinery**
+
+Secondary CTA:
+
+**View Auctions**
+
+Below the hero, show:
+
+### How RigLogix Works
+
+**Discover → Compare → Bid/Book → Track → Complete**
+
+Then show feature cards:
+
+* Direct-to-Owner
+* Transparent Pricing
+* Reverse Auction
+* Spatial Radar
+* Telematics
+* Booking Tracking
+
+---
+
+# 27. DEMO MODE
+
+Because this is a college prototype, create a clearly visible:
+
+## Demo Mode
+
+The application should work immediately after running without requiring external accounts.
+
+Preload realistic sample data based on the existing source.
+
+The teacher should be able to:
+
+1. Open the application.
+2. Browse machinery.
+3. Open an equipment detail page.
+4. View pricing.
+5. Create a booking.
+6. View booking tracking.
+7. Open an auction.
+8. Place a bid.
+9. View spatial radar.
+10. Open owner portal.
+11. View fleet information.
+12. Submit/view a review.
+
+Everything necessary for the demonstration should work locally.
+
+---
+
+# 28. DO NOT DO THESE THINGS
+
+Do NOT:
+
+* Delete existing important functionality.
+* Replace the project with a generic rental website.
+* Add random features unrelated to RigLogix.
+* Invent real companies or partnerships.
+* Claim real-time GPS when using static data.
+* Claim real payment processing if it isn't implemented.
+* Claim real escrow if it isn't implemented.
+* Claim production deployment.
+* Use fake statistics as real-world facts.
+* Add unnecessary authentication complexity for the demo.
+* Add dependencies that are unnecessary.
+* Break existing working functionality.
+
+---
+
+# 29. CODE QUALITY
+
+Use:
+
+* TypeScript
+* Reusable components
+* Clean folder structure
+* Proper types/interfaces
+* Centralized data/API handling
+* Error handling
+* Loading states
+* Empty states
+* Responsive design
+
+Avoid:
+
+* Huge monolithic components
+* Repeated code
+* Hardcoded UI values where data should be dynamic
+* Console errors
+* Broken links/routes
+* Unused dependencies
+
+---
+
+# 30. REPLIT REQUIREMENTS
+
+Make sure the application can run with a simple command such as:
+
+```bash
+npm run dev
+```
+
+or the appropriate Replit start command.
+
+Configure the Replit environment properly.
+
+Ensure:
+
+* Dependencies install successfully
+* Build works
+* Dev server works
+* Correct port is exposed
+* No missing environment variables prevent demo operation
+* No compilation errors
+* No major console errors
+
+If environment variables are genuinely required for optional services, provide sensible demo fallbacks.
+
+---
+
+# 31. TEST THE COMPLETE DEMO
+
+Before considering the task complete, test the major workflows.
+
+### Workflow A — Machinery
+
+Search → Filter → Open Equipment → View Specs → View Pricing
+
+### Workflow B — Booking
+
+Select Equipment → Enter Details → Calculate Price → Confirm → View Booking → Advance Status
+
+### Workflow C — Auction
+
+Create Auction → View Auction → Submit Bid → Update Lowest Bid → Award Bid
+
+### Workflow D — Radar
+
+Open Radar → Select Radius → View Nearby Equipment → Open Equipment
+
+### Workflow E — Owner
+
+Open Owner Portal → View Fleet → View Jobs → View Equipment Status
+
+### Workflow F — Review
+
+Complete Booking → Submit Review → Update Rating
+
+Fix any errors encountered.
+
+---
+
+# 32. FINAL PRESENTATION EXPERIENCE
+
+The website will be demonstrated to a college teacher.
+
+Therefore, prioritize:
+
+### VISUAL IMPACT
+
+The interface should immediately communicate what RigLogix does.
+
+### FUNCTIONAL DEMO
+
+The main workflows should actually work.
+
+### CLARITY
+
+The teacher should understand the concept without needing to inspect the source code.
+
+### TECHNICAL CREDIBILITY
+
+The implementation should demonstrate:
+
+* Structured data
+* Components
+* Business logic
+* Database
+* API/state management
+* Search/filtering
+* Booking
+* Auction
+* Spatial functionality
+
+---
+
+# 33. FINAL OUTPUT
+
+When finished, provide:
+
+1. A fully working RigLogix web application.
+2. A clean responsive UI.
+3. Working navigation.
+4. Working demo data.
+5. Working machinery marketplace.
+6. Working booking flow.
+7. Working reverse auction.
+8. Working spatial radar.
+9. Working owner portal.
+10. Working reviews.
+11. Working pricing calculation.
+12. Working booking tracking.
+13. Clear separation between implemented prototype functionality and future functionality.
+
+At the end, give me a concise summary containing:
+
+### Implemented
+
+List the major features successfully implemented.
+
+### Adapted from Original Source
+
+List the major features converted from the uploaded project.
+
+### Prototype / Simulated
+
+List functionality that is simulated rather than connected to real external services.
+
+### Future Production Requirements
+
+List what would need to be added for real-world deployment.
+
+### How to Run
+
+Give the exact command to run the application in Replit.
+
+Do not stop after analyzing the ZIP.
+
+**Actually build, integrate, run and test the application.**
+
+The final result should feel like a **working product prototype of RigLogix**, not merely a static presentation website.
